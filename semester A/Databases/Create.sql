@@ -36,7 +36,7 @@ CREATE TABLE Person (
     FOREIGN KEY (f_team_vat) REFERENCES Team(vat)
 );
 
-CREATE TABLE Matches (
+CREATE TABLE Match (
     f_home_team_vat CHAR(8),
     f_away_team_vat CHAR(8),
     result SMALLINT,
