@@ -31,9 +31,7 @@ CREATE TABLE Person (
     date_of_birth DATE NOT NULL,
     salary INTEGER,
     is_coach BOOLEAN NOT NULL,
-    f_team_vat CHAR(8),
-    PRIMARY KEY (id),
-    FOREIGN KEY (f_team_vat) REFERENCES Team(vat)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE Match (
@@ -51,7 +49,7 @@ CREATE TABLE History (
     f_team_vat CHAR(8),
     f_person_id CHAR(8),
     from_date DATE NOT NULL,
-    to_date DATE NOT NULL,
+    to_date DATE,
     salary DECIMAL NOT NULL,
     PRIMARY KEY (ID),
     FOREIGN KEY (f_team_vat) REFERENCES Team(vat),
