@@ -1,3 +1,4 @@
 /venvs
 /datasets
 *.ipynb_checkpoints
+*/data
