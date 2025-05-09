@@ -1,6 +1,6 @@
 /venvs
 */datasets
 /datasets
-*/data
+*/data/temp
 *.ipynb_checkpoints
 *.html
