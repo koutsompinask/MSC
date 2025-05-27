@@ -79,8 +79,6 @@ scores < 30
 # ...that we can now use to subset
 scores[scores<30]
 
-
-
 ###########################################################################
 #######             IMPORTING AND EXPORING DATA                   #########
 ###########################################################################
@@ -91,6 +89,8 @@ scores[scores<30]
 ## dat.tab <- read.delim("/path/to/file.txt",  sep="\t")
 
 dat_csv <- read.csv("https://stats.oarc.ucla.edu/stat/data/hsbraw.csv")
+
+Auto <- read.csv("C:/Developer/MSC/semester B/R/Introduction to R - R code & slides & data/Auto.csv")
 
 ## # write a csv file
 ## write.csv(dat_csv, file = "path/to/save/filename.csv")
@@ -116,6 +116,8 @@ mydata <- data.frame(patient=c("Smith", "Jones", "Williams"),
                      height=c(72, 61, 66),
                      diabetic=c(1, 0, 0))
 
+head(mydata)
+View(mydata)
 
 # row 3 column 2
 mydata[3,2]
@@ -159,8 +161,6 @@ colnames(mydata)
 
 # mydata has 3 rows, and the rep vector has 5
 mydata$z <- rep(0,5)
-
-
 
 ###########################################################################
 #######                          DATA MANAGEMENT                  #########
