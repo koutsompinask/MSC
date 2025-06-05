@@ -1,7 +1,7 @@
 #install.packages('MASS')
 #install.packages('ISLR')
 library(MASS)
-# library(ISLR)
+library(ISLR)
 # write.csv(Boston,"C:\\Users\\EEV\\OneDrive - chios.aegean.gr\\My Lecture Notes\\Business & Data Analytics ECON\\Lecture notes - An Introduction to Statistical Learning\\eclass files\\Boston.csv", row.names = F)
 
 
@@ -145,7 +145,8 @@ summary(fit4)
 # of relative importance provided.
 fit3b=lm(medv~lstat+age+indus+rad+ptratio,Boston)
 # Calculate Relative Importance for Each Predictor
-library(relaimpo) #install.packages("relaimpo")
+#install.packages("relaimpo")
+library(relaimpo)
 calc.relimp(fit4,type=c("lmg","last","first","pratt"),
             rela=TRUE)
 
