@@ -24,7 +24,7 @@ library(ISLR)
 attach(Carseats)
 High=as.factor(ifelse(Sales<=8,"No","Yes"))
 Carseats=data.frame(Carseats,High)
-View(Carseats)
+# View(Carseats)
 str(Carseats)
 
 # We now use the tree() function to fit a classification tree in order to predict
@@ -66,14 +66,10 @@ summary(tree.carseats)
 tree.pred=predict(tree.carseats,Carseats.test,type="class")
 High.test=High[-train]
 table(tree.pred,High.test)
-(104+50)/200
+(104 + 50)/200
 
 plot(tree.carseats)
 text(tree.carseats,pretty=0)
-
-
-
-
 
 # The function cv.tree() performs cross-validation in order to
 # determine the optimal level of tree complexity; cost complexity pruning
@@ -97,10 +93,11 @@ plot(cv.carseats$k,cv.carseats$dev,type="b")
 # obtain the nine-node tree.
 prune.carseats=prune.misclass(tree.carseats,best=9)
 summary(prune.carseats)
+par(mfrow=c(1,1))
 plot(prune.carseats)
 text(prune.carseats,pretty=0)
 
-# How well does this pruned tree perform on the test data set? Once again,
+# How well doehttp://127.0.0.1:20063/graphics/plot_zoom_png?width=1508&height=722s this pruned tree perform on the test data set? Once again,
 # we apply the predict() function
 tree.pred=predict(prune.carseats,Carseats.test,type="class")
 table(tree.pred,High.test)
@@ -113,9 +110,6 @@ prune.carseats=prune.misclass(tree.carseats,best=19)
 summary(prune.carseats)
 plot(prune.carseats)
 text(prune.carseats,pretty=0)
-
-
-
 
 tree.pred=predict(prune.carseats,Carseats.test,type="class")
 table(tree.pred,High.test)
@@ -130,7 +124,7 @@ table(tree.pred,High.test)
 # training set, and fit the tree to the training data.
 
 library(MASS)
-View(Boston)
+#View(Boston)
 set.seed(1)
 train = sample(1:nrow(Boston), nrow(Boston)/2)
 tree.boston=tree(medv~.,Boston,subset=train)
